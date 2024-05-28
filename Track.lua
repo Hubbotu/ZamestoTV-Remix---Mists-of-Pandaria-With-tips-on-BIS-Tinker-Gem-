@@ -1,4 +1,3 @@
--- Create the addon
 local BronzeTracker = CreateFrame("Frame", "BronzeTrackerFrame", UIParent)
 
 -- Initialize variables
@@ -26,12 +25,71 @@ local L = {
 }
 
 -- Set the default language to English
-local lang = "enUS"
+local lang = GetLocale() -- Automatically sets to the game client locale
 
--- Function to set the language
+-- Function to set the language manually
 local function SetLanguage(language)
     lang = language
 end
+
+-- Create a frame for displaying the information
+local displayFrame = CreateFrame("Frame", "BronzeTrackerDisplay", UIParent, "BackdropTemplate")
+displayFrame:SetSize(200, 100)
+displayFrame:SetPoint("CENTER")
+displayFrame:SetBackdrop({
+    bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background",
+    edgeFile = "Interface\\DialogFrame\\UI-DialogBox-Border",
+    tile = true,
+    tileSize = 32,
+    edgeSize = 32,
+    insets = { left = 11, right = 12, top = 12, bottom = 11 }
+})
+
+-- Make the frame draggable
+displayFrame:SetMovable(true)
+displayFrame:EnableMouse(true)
+displayFrame:RegisterForDrag("LeftButton")
+displayFrame:SetScript("OnDragStart", function(self) self:StartMoving() end)
+displayFrame:SetScript("OnDragStop", function(self)
+    self:StopMovingOrSizing()
+    -- Save the position
+    local point, _, relativePoint, xOfs, yOfs = self:GetPoint()
+    BronzeTrackerDB.position = {
+        point = point,
+        relativePoint = relativePoint,
+        xOfs = xOfs,
+        yOfs = yOfs
+    }
+end)
+
+-- Create font strings for the display
+local titleText = displayFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
+titleText:SetPoint("TOP", 0, -10)
+titleText:SetText(L[lang].BRONZE_TRACKER)
+
+local totalBronzeText = displayFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
+totalBronzeText:SetPoint("TOPLEFT", 10, -30)
+totalBronzeText:SetText(L[lang].TOTAL_BRONZE .. "0")
+
+local BPHText = displayFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
+BPHText:SetPoint("TOPLEFT", 10, -50)
+BPHText:SetText(L[lang].BRONZE_PER_HOUR .. "0")
+
+local sessionBronzeText = displayFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
+sessionBronzeText:SetPoint("TOPLEFT", 10, -70)
+sessionBronzeText:SetText(L[lang].BRONZE_THIS_SESSION .. "0")
+
+-- Function to update the display
+local function UpdateDisplay()
+    totalBronzeText:SetText(L[lang].TOTAL_BRONZE .. bronze)
+    BPHText:SetText(L[lang].BRONZE_PER_HOUR .. string.format("%.1f", BPH))
+    sessionBronzeText:SetText(L[lang].BRONZE_THIS_SESSION .. sessionBronze)
+end
+
+-- OnUpdate script to update the display regularly
+displayFrame:SetScript("OnUpdate", function(self, elapsed)
+    UpdateDisplay()
+end)
 
 -- Function to initialize variables
 local function Initialize()
@@ -43,6 +101,26 @@ local function Initialize()
         startTime = GetTime()
         BPH = 0
         sessionBronze = 0
+    end
+
+    -- Load saved variables
+    if not BronzeTrackerDB then
+        BronzeTrackerDB = {}
+    end
+
+    if BronzeTrackerDB.position then
+        displayFrame:ClearAllPoints()
+        displayFrame:SetPoint(BronzeTrackerDB.position.point, UIParent, BronzeTrackerDB.position.relativePoint, BronzeTrackerDB.position.xOfs, BronzeTrackerDB.position.yOfs)
+    end
+
+    if BronzeTrackerDB.isShown == nil then
+        BronzeTrackerDB.isShown = true
+    end
+
+    if BronzeTrackerDB.isShown then
+        displayFrame:Show()
+    else
+        displayFrame:Hide()
     end
 end
 
@@ -92,61 +170,14 @@ BronzeTracker:RegisterEvent("PLAYER_LOGIN")
 BronzeTracker:RegisterEvent("CURRENCY_DISPLAY_UPDATE")
 BronzeTracker:SetScript("OnEvent", OnEvent)
 
--- Create a frame for displaying the information
-local displayFrame = CreateFrame("Frame", "BronzeTrackerDisplay", UIParent, "BackdropTemplate")
-displayFrame:SetSize(200, 100)
-displayFrame:SetPoint("CENTER")
-displayFrame:SetBackdrop({
-    bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background",
-    edgeFile = "Interface\\DialogFrame\\UI-DialogBox-Border",
-    tile = true,
-    tileSize = 32,
-    edgeSize = 32,
-    insets = { left = 11, right = 12, top = 12, bottom = 11 }
-})
-
--- Make the frame draggable
-displayFrame:SetMovable(true)
-displayFrame:EnableMouse(true)
-displayFrame:RegisterForDrag("LeftButton")
-displayFrame:SetScript("OnDragStart", function(self) self:StartMoving() end)
-displayFrame:SetScript("OnDragStop", function(self) self:StopMovingOrSizing() end)
-
--- Create font strings for the display
-local titleText = displayFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-titleText:SetPoint("TOP", 0, -10)
-titleText:SetText(L[lang].BRONZE_TRACKER)
-
-local totalBronzeText = displayFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-totalBronzeText:SetPoint("TOPLEFT", 10, -30)
-totalBronzeText:SetText(L[lang].TOTAL_BRONZE .. "0")
-
-local BPHText = displayFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-BPHText:SetPoint("TOPLEFT", 10, -50)
-BPHText:SetText(L[lang].BRONZE_PER_HOUR .. "0")
-
-local sessionBronzeText = displayFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-sessionBronzeText:SetPoint("TOPLEFT", 10, -70)
-sessionBronzeText:SetText(L[lang].BRONZE_THIS_SESSION .. "0")
-
--- Update display function
-local function UpdateDisplay()
-    totalBronzeText:SetText(L[lang].TOTAL_BRONZE .. bronze)
-    BPHText:SetText(L[lang].BRONZE_PER_HOUR .. string.format("%.1f", BPH))
-    sessionBronzeText:SetText(L[lang].BRONZE_THIS_SESSION .. sessionBronze)
-end
-
--- OnUpdate script to update the display regularly
-displayFrame:SetScript("OnUpdate", function(self, elapsed)
-    UpdateDisplay()
-end)
-
 -- Function to toggle the visibility of the frame
 local function ToggleBronzeTrackerFrame()
     if displayFrame:IsShown() then
         displayFrame:Hide()
+        BronzeTrackerDB.isShown = false
     else
         displayFrame:Show()
+        BronzeTrackerDB.isShown = true
     end
 end
 
