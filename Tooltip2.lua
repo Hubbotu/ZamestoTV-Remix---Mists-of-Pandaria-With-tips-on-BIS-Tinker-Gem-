@@ -5,16 +5,16 @@ local locale = GetLocale()
 L["enUS"] = {
     ADDON_NAME = "ZamestoTV: Remix",
     OPENING_ITEM = "Opening item - ",
-    ENABLED = "Enabled",
-    DISABLED = "Disabled"
+    ENABLED = "Auto open Enabled",
+    DISABLED = "Auto open Disabled"
 }
 
 -- Russian localization
 L["ruRU"] = {
     ADDON_NAME = "ZamestoTV: Remix",
     OPENING_ITEM = "Открываем сундук - ",
-    ENABLED = "Включено",
-    DISABLED = "Выключено"
+    ENABLED = "Автооткрытие Включено",
+    DISABLED = "Автооткрытие Выключено"
 }
 
 -- Fall back to English if the locale isn't directly supported
@@ -30,6 +30,7 @@ local openableIDs = {
     [223911] = true, -- Greater Bronze Cache
 }
 
+-- Declare the saved variable
 local openableScanEnabled = false
 local openableScanQueued = false
 
@@ -52,6 +53,7 @@ end
 local frame = CreateFrame("Frame")
 frame:RegisterEvent("BAG_UPDATE_DELAYED")
 frame:RegisterEvent("PLAYER_REGEN_ENABLED")
+frame:RegisterEvent("VARIABLES_LOADED")
 
 frame:SetScript("OnEvent", function(self, event)
     if event == "BAG_UPDATE_DELAYED" then
@@ -65,6 +67,12 @@ frame:SetScript("OnEvent", function(self, event)
             openableScanQueued = false
             OpenableScan()
         end
+    elseif event == "VARIABLES_LOADED" then
+        if ZorROpenableScanEnabled ~= nil then
+            openableScanEnabled = ZorROpenableScanEnabled
+        end
+        local status = openableScanEnabled and Loc.ENABLED or Loc.DISABLED
+        print("[" .. Loc.ADDON_NAME .. "] " .. status)
     end
 end)
 
@@ -72,6 +80,7 @@ end)
 SLASH_ZORR1 = "/zorr"
 SlashCmdList["ZORR"] = function()
     openableScanEnabled = not openableScanEnabled
+    ZorROpenableScanEnabled = openableScanEnabled -- Save the state
     local status = openableScanEnabled and Loc.ENABLED or Loc.DISABLED
     print("[" .. Loc.ADDON_NAME .. "] " .. status)
 end

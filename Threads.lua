@@ -58,7 +58,7 @@ TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Unit, function(tool
         local aura = C_UnitAuras.GetAuraDataBySpellName(unit, spellName)
         if aura then
             local total = 0
-            for i = 1, #aura.points do
+            for i = 1, 9 do
                 total = total + (aura.points[i] or 0)
             end
             local formattedTotal, color = formatNumber(total)
