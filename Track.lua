@@ -21,6 +21,12 @@ local L = {
         BRONZE_PER_HOUR = "Бронзы в час: ",
         BRONZE_THIS_SESSION = "Бронзы за эту сессию: ",
         BRONZE_TRACKER = "Отслеживание бронзы"
+    },
+    frFR = {
+        TOTAL_BRONZE = "Bronze total: ",
+        BRONZE_PER_HOUR = "Bronze par heure: ",
+        BRONZE_THIS_SESSION = "Bronze cette session: ",
+        BRONZE_TRACKER = "Suivi de bronze"
     }
 }
 
@@ -182,5 +188,5 @@ local function ToggleBronzeTrackerFrame()
 end
 
 -- Register the slash command
-SLASH_ZAKK1 = '/zakk'
-SlashCmdList["ZAKK"] = ToggleBronzeTrackerFrame
+SLASH_BRONZETRACKER1 = '/bronze'
+SlashCmdList["BRONZETRACKER"] = ToggleBronzeTrackerFrame

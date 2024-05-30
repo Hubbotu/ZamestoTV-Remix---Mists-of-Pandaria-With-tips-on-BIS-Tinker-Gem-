@@ -44,6 +44,10 @@ local L = {
         ["Threads"] = "|cffFFFFFFНити:|r",
         ["Timerunner's Advantage"] = "Преимущество путешественника во времени",
     },
+    ["frFR"] = {
+        ["Threads"] = "|cffFFFFFFFils:|r",
+        ["Timerunner's Advantage"] = "Avantage du Coureur de Temps",
+    },
 }
 
 TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Unit, function(tooltip)
@@ -54,7 +58,7 @@ TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Unit, function(tool
         local aura = C_UnitAuras.GetAuraDataBySpellName(unit, spellName)
         if aura then
             local total = 0
-            for i = 1, 9 do
+            for i = 1, #aura.points do
                 total = total + (aura.points[i] or 0)
             end
             local formattedTotal, color = formatNumber(total)
