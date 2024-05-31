@@ -47,7 +47,7 @@ L["Ferdinand Note"] = "Содержит 50-70 |cFFFFFFFFБронзы|r."
 
 -- Valley of the Four Winds (Treasure)
 L["Virmen Treasure Cache"] = "|cFFFFFFFFСундук с сокровищами гну-синей|r"
-L["Virmen Treasure Cache Note"] = "Содержит 17 |cFFFFFFFFБронзы|r, сундук в норе."
+L["Virmen Treasure Cache Note"] = "Содержит 17 |cFFFFFFFFБронзы|r, и нити. Сундук в норе."
 L["The Hammer of Folly"] = "|cFFFFFFFFМолот безрассудства|r"
 L["The Hammer of Folly Note"] = "Содержит |cFF9D9D9DМолот безрассудства|r, стоимостью |cFFFFFFFF100 золотых.|r"
 
@@ -85,6 +85,9 @@ L["Ancient Mogu Tablet Note"] = "Содержит |cFF9D9D9DДревняя та�
 L["Terracotta Head"] = "|cFFFFFFFFГолова из терракоты|r"
 L["Terracotta Head Note"] = "Содержит |cFF9D9D9DГолова из терракоты|r, стоимостью |cFFFFFFFF100 золотых.|r"
 
+L["Mo-Mo's Treasure Chest"] = "|cFFFFFFFFСундук сокровищ Мо-Мо|r"
+L["Mo-Mo's Treasure Chest Note"] = "Содержит 65-70 |cFFFFFFFFБронзы|r и нити."
+
 -- Kun-Lai Summit (Rare)
 L["Ahone the Wanderer"] = "|cFFFFFFFFАхон Странствующая|r"
 L["Ahone the Wanderer Note"] = "Содержит 50-70 |cFFFFFFFFБронзы|r."
@@ -111,7 +114,7 @@ L["Hardened Sap of Kri'vess Note"] = "Содержит |cFF9D9D9DЗагусте�
 L["Amber Encased Moth"] = "|cFFFFFFFFМотылек в янтаре|r"
 L["Amber Encased Moth Note"] = "Содержит |cFF9D9D9DМотылек в янтаре|r, стоимостью |cFFFFFFFF105 золотых.|r."
 L["Abandoned Crate of Goods"] = "|cFFFFFFFFБрошенный ящик с товарами|r"
-L["Abandoned Crate of Goods Note"] = "Содержит 40-50 |cFFFFFFFFБронзы|r, сундук под тентом."
+L["Abandoned Crate of Goods Note"] = "Содержит 40-50 |cFFFFFFFFБронзы|r, и нити. Сундук под тентом."
 
 L["Shado"] = "|cFFFFFFFFШадо-Пан|r"
 L["Shado Note"] = "Обмен |cFFFFFFFFМалый амулет удачи|r на репутацию."
@@ -192,6 +195,8 @@ L["Lotus Note"] = "Обмен |cFFFFFFFFМалый амулет удачи|r н�
 -- Krasarang Wilds (Treasure)
 L["Saurok Stone Tablet"] = "|cFFFFFFFFКаменная скрижаль сауроков|r"
 L["Saurok Stone Tablet Note"] = "Содержит |cFF9D9D9DКаменная скрижаль сауроков|r, стоимостью |cFFFFFFFF100 золотых.|r."
+L["Stack of Papers"] = "|cFFFFFFFFСтопка бумаг|r"
+L["Stack of Papers Note"] = "Содержит |cFF9D9D9DСтопка бумаг|r, стоимостью |cFFFFFFFF15 золотых.|r."
 
 L["Anglers"] = "|cFFFFFFFFРыболовы|r"
 L["Anglers Note"] = "Обмен |cFFFFFFFFМалый амулет удачи|r на репутацию."
@@ -277,6 +282,25 @@ L["Molthor"] = "|cFFFFFFFFМолтор|r"
 L["Molthor Note"] = "Содержит 50-70 |cFFFFFFFFБронзы|r."
 L["Haywire Sunreaver Construct"] = "|cFFFFFFFFВзбешенный голем Похитителей Солнца|r"
 L["Haywire Sunreaver Construct Note"] = "Содержит 50-70 |cFFFFFFFFБронзы|r."
+
+L["Kor'dok and Tinzo the Emberkeeper"] = "|cFFFFFFFFКор'док и Тинзо Хранитель Углей|r"
+L["Kor'dok and Tinzo the Emberkeeper Note"] = "Содержит 50-70 |cFFFFFFFFБронзы|r, для призыва нужно 3 |cFF0070DDРитуальный камень Шань'цзэ|r."
+L["Spirit of Warlord Teng"] = "|cFFFFFFFFДух полководца Тэна|r"
+L["Spirit of Warlord Teng Note"] = "Содержит 50-70 |cFFFFFFFFБронзы|r, для призыва нужно 3 |cFF0070DDРитуальный камень Шань'цзэ|r."
+L["Echo of Kros"] = "|cFFFFFFFFЭхо Кроса|r"
+L["Echo of Kros Note"] = "Содержит 50-70 |cFFFFFFFFБронзы|r, для призыва нужно 3 |cFF0070DDРитуальный камень Шань'цзэ|r."
+L["Electromancer Ju'le"] = "|cFFFFFFFFЭлектромант Джу'ле|r"
+L["Electromancer Ju'le Note"] = "Содержит 50-70 |cFFFFFFFFБронзы|r, для призыва нужно 3 |cFF0070DDРитуальный камень Шань'цзэ|r."
+L["Qi'nor"] = "|cFFFFFFFFЦи'нор|r"
+L["Qi'nor Note"] = "Содержит 50-70 |cFFFFFFFFБронзы|r, для призыва нужно 3 |cFF0070DDРитуальный камень Шань'цзэ|r."
+L["Ancient Mogu Guardian"] = "|cFFFFFFFFДревний страж могу|r"
+L["Ancient Mogu Guardian Note"] = "Содержит 50-70 |cFFFFFFFFБронзы|r, для призыва нужно 3 |cFF0070DDРитуальный камень Шань'цзэ|r."
+L["Incomplete Drakkari Colossus"] = "|cFFFFFFFFНезавершенный колосс Драккари|r"
+L["Incomplete Drakkari Colossus Note"] = "Содержит 50-70 |cFFFFFFFFБронзы|r, для призыва нужно 3 |cFF0070DDРитуальный камень Шань'цзэ|r."
+L["Cera"] = "|cFFFFFFFFЦера|r"
+L["Cera Note"] = "Содержит 50-70 |cFFFFFFFFБронзы|r, для призыва нужно 3 |cFF0070DDРитуальный камень Шань'цзэ|r."
+L["Windweaver Akil'amon"] = "|cFFFFFFFFАкил'амон Сплетающий Ветра|r"
+L["Windweaver Akil'amon Note"] = "Содержит 50-70 |cFFFFFFFFБронзы|r, для призыва нужно 3 |cFF0070DDРитуальный камень Шань'цзэ|r."
 
 -- Timeless Isle (Treasure)
 L["Flameheart Shawl"] = "|cFFFFFFFFШаль пламенного сердца|r"

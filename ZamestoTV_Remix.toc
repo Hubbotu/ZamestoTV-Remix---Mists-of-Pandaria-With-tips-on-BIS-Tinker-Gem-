@@ -5,7 +5,7 @@
 ## Notes-ruRU: Расположение достижений для Remix: Mists of Pandaria
 ## Author: ZamestoTV
 ## IconTexture: Interface\AddOns\ZamestoTV_GoldFarm\Icons\goblin
-## Version: 2.9.9
+## Version: 3.0.0
 ## DefaultState: enabled
 ## X-Category: Map
 ## SavedVariables: HandyNotes_GoldDB

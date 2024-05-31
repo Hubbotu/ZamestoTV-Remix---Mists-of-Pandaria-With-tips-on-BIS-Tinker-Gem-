@@ -33,6 +33,12 @@ local L = {
         BRONZE_PER_HOUR = "Bronze pro Stunde: ",
         BRONZE_THIS_SESSION = "Bronze diese Sitzung: ",
         BRONZE_TRACKER = "Bronze-Tracker"
+    },
+	esES = {
+        TOTAL_BRONZE = "Bronce general: ",
+        BRONZE_PER_HOUR = "Bronce por hora: ",
+        BRONZE_THIS_SESSION = "Bronce esta sesión: ",
+        BRONZE_TRACKER = "Rastreador de Bronce"
     }
 }
 

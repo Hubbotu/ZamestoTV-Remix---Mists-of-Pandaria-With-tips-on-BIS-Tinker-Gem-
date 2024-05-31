@@ -47,7 +47,7 @@ L["Ferdinand Note"] = "Contains 50-70 |cFFFFFFFFBronze|r."
 
 -- Valley of the Four Winds (Treasure)
 L["Virmen Treasure Cache"] = "|cFFFFFFFFVirmen Treasure Cache|r"
-L["Virmen Treasure Cache Note"] = "Contains 17 |cFFFFFFFFBronze|r, chest in the hole."
+L["Virmen Treasure Cache Note"] = "Contains 17 |cFFFFFFFFBronze|r, and threads. Chest in the hole."
 L["The Hammer of Folly"] = "|cFFFFFFFFThe Hammer of Folly|r"
 L["The Hammer of Folly Note"] = "Contains |cFF9D9D9DThe Hammer of Folly|r, cost |cFFFFFFFF100 gold.|r"
 
@@ -103,6 +103,9 @@ L["Scritch Note"] = "Contains 50-70 |cFFFFFFFFBronze|r."
 L["Zai the Outcast"] = "|cFFFFFFFFZai the Outcast|r"
 L["Zai the Outcast Note"] = "Contains 50-70 |cFFFFFFFFBronze|r."
 
+L["Mo-Mo's Treasure Chest"] = "|cFFFFFFFFMo-Mo's Treasure Chest|r"
+L["Mo-Mo's Treasure Chest Note"] = "Contains 65-75 |cFFFFFFFFBronze|r, and threads."
+
 -- Townlong Steppes (Treasure)
 L["Fragment of Dread"] = "|cFFFFFFFFFragment of Dread|r"
 L["Fragment of Dread Note"] = "Contains |cFF9D9D9DFragment of Dread|r, cost |cFFFFFFFF90 gold|r, chest in a cave."
@@ -111,7 +114,7 @@ L["Hardened Sap of Kri'vess Note"] = "Contains |cFF9D9D9DHardened Sap of Kri'ves
 L["Amber Encased Moth"] = "|cFFFFFFFFAmber Encased Moth|r"
 L["Amber Encased Moth Note"] = "Contains |cFF9D9D9DAmber Encased Moth|r, cost |cFFFFFFFF105 gold.|r."
 L["Abandoned Crate of Goods"] = "|cFFFFFFFFAbandoned Crate of Goods|r"
-L["Abandoned Crate of Goods Note"] = "Contains 40-50 |cFFFFFFFFBronze|r, chest under awning."
+L["Abandoned Crate of Goods Note"] = "Contains 40-50 |cFFFFFFFFBronze|r, and threads. Chest under awning."
 
 L["Shado"] = "|cFFFFFFFFShado-Pan|r"
 L["Shado Note"] = "Exchange |cFFFFFFFFLesser Charm of Good Fortune|r on reputation."
@@ -192,6 +195,8 @@ L["Lotus Note"] = "Exchange |cFFFFFFFFLesser Charm of Good Fortune|r on reputati
 -- Krasarang Wilds (Treasure)
 L["Saurok Stone Tablet"] = "|cFFFFFFFFSaurok Stone Tablet|r"
 L["Saurok Stone Tablet Note"] = "Contains |cFF9D9D9DSaurok Stone Tablet|r, cost |cFFFFFFFF100 gold.|r."
+L["Stack of Papers"] = "|cFFFFFFFFStack of Papers|r"
+L["Stack of Papers Note"] = "Contains |cFF9D9D9DStack of Papers|r, cost |cFFFFFFFF15 gold.|r."
 
 L["Anglers"] = "|cFFFFFFFFThe Anglers|r"
 L["Anglers Note"] = "Exchange |cFFFFFFFFLesser Charm of Good Fortune|r on reputation."
@@ -277,6 +282,25 @@ L["Molthor"] = "|cFFFFFFFFMolthor|r"
 L["Molthor Note"] = "Contains 50-70 |cFFFFFFFFBronze|r."
 L["Haywire Sunreaver Construct"] = "|cFFFFFFFFHaywire Sunreaver Construct|r"
 L["Haywire Sunreaver Construct Note"] = "Contains 50-70 |cFFFFFFFFBronze|r."
+
+L["Kor'dok and Tinzo the Emberkeeper"] = "|cFFFFFFFFKor'dok and Tinzo the Emberkeeper|r"
+L["Kor'dok and Tinzo the Emberkeeper Note"] = "Contains 50-70 |cFFFFFFFFBronze|r, requires 3 to summon |cFF0070DDShan'ze Ritual Stone|r."
+L["Spirit of Warlord Teng"] = "|cFFFFFFFFSpirit of Warlord Teng|r"
+L["Spirit of Warlord Teng Note"] = "Contains 50-70 |cFFFFFFFFBronze|r, requires 3 to summon |cFF0070DDShan'ze Ritual Stone|r."
+L["Echo of Kros"] = "|cFFFFFFFFEcho of Kros|r"
+L["Echo of Kros Note"] = "Contains 50-70 |cFFFFFFFFBronze|r, requires 3 to summon |cFF0070DDShan'ze Ritual Stone|r."
+L["Electromancer Ju'le"] = "|cFFFFFFFFElectromancer Ju'le|r"
+L["Electromancer Ju'le Note"] = "Contains 50-70 |cFFFFFFFFBronze|r, requires 3 to summon |cFF0070DDShan'ze Ritual Stone|r."
+L["Qi'nor"] = "|cFFFFFFFFQi'nor|r"
+L["Qi'nor Note"] = "Contains 50-70 |cFFFFFFFFBronze|r, requires 3 to summon |cFF0070DDShan'ze Ritual Stone|r."
+L["Ancient Mogu Guardian"] = "|cFFFFFFFFAncient Mogu Guardian|r"
+L["Ancient Mogu Guardian Note"] = "Contains 50-70 |cFFFFFFFFBronze|r, requires 3 to summon |cFF0070DDShan'ze Ritual Stone|r."
+L["Incomplete Drakkari Colossus"] = "|cFFFFFFFFIncomplete Drakkari Colossus|r"
+L["Incomplete Drakkari Colossus Note"] = "Contains 50-70 |cFFFFFFFFBronze|r, requires 3 to summon |cFF0070DDShan'ze Ritual Stone|r."
+L["Cera"] = "|cFFFFFFFFCera|r"
+L["Cera Note"] = "Contains 50-70 |cFFFFFFFFBronze|r, requires 3 to summon |cFF0070DDShan'ze Ritual Stone|r."
+L["Windweaver Akil'amon"] = "|cFFFFFFFFWindweaver Akil'amon|r"
+L["Windweaver Akil'amon Note"] = "Contains 50-70 |cFFFFFFFFBronze|r, requires 3 to summon |cFF0070DDShan'ze Ritual Stone|r."
 
 -- Timeless Isle (Treasure)
 L["Flameheart Shawl"] = "|cFFFFFFFFFlameheart Shawl|r"
