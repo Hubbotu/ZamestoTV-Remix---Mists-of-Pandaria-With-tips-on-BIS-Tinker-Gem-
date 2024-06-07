@@ -3,6 +3,10 @@ local L = LibStub("AceLocale-3.0"):NewLocale(myaddon, "ruRU", false)
 
 if not L then return end
 
+-- Isle of Giants  (Rare)
+L["War-God Dokah"] = "|cFFFFFFFFБог войны Дока|r"
+L["War-God Dokah Note"] = "Содержит 60-80 |cFFFFFFFFБронзы|r и жетоны на репутацию."
+
 -- The Jade Forest (Treasure)
 L["Ancient Pandaren Tea Pot"] = "|cFFFFFFFFДревний пандаренский чайник|r"
 L["Ancient Pandaren Tea Pot Note"] = "Содержит |cFF9D9D9DДревний пандаренский чайник|r, стоимостью |cFFFFFFFF10 золотых.|r"
@@ -254,7 +258,7 @@ L["Ai-Li Skymirror Note"] = "Содержит 60-80 |cFFFFFFFFБронзы|r."
 L["Dak the Breaker"] = "|cFFFFFFFFДак Крушитель|r"
 L["Dak the Breaker Note"] = "Содержит 60-80 |cFFFFFFFFБронзы|r."
 L["Zandalari Warbringer"] = "|cFFFFFFFFЗандаларский завоеватель|r"
-L["Zandalari Warbringer Note"] = "Содержит 60-80 |cFFFFFFFFБронзы|r."
+L["Zandalari Warbringer Note"] = "Содержит 60-80 |cFFFFFFFFБронзы|r и жетоны на репутацию."
 
 L["Klaxxi"] = "|cFFFFFFFFКлакси|r"
 L["Klaxxi Note"] = "Обмен |cFFFFFFFFМалый амулет удачи|r на репутацию."

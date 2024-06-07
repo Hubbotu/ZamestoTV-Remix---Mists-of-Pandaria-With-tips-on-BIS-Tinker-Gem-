@@ -20,6 +20,7 @@ ns.map_spellids = {
 	-- [554] = 0, -- Timeless Isle
 	-- [395] = 0, -- Guo-Lai Halls
 	-- [373] = 0, -- Greenstone Quarry, cave in Jade Forest
+	-- [507] = 0, -- Isle of Giants
 
 }
 
@@ -173,6 +174,15 @@ ns.points = {
             Zamro = true,
             note = L["Ancient Pandaren Mining Pick Note"],
             pathto = "Interface\\Addons\\"..myname.."\\Icons\\cave.tga",
+        }),				
+    },
+		[507] = { -- Isle of Giants
+	        [77608220] = ({
+            label = L["War-God Dokah"],
+            cont = true,
+            Zamro = true,
+            note = L["War-God Dokah Note"],
+            pathto = "Interface\\Addons\\"..myname.."\\Icons\\fskull.tga",				
         }),				
     },
 		[373] = { -- Greenstone Quarry, cave in Jade Forest
