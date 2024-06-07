@@ -1,5 +1,8 @@
 local DragonflightAddon = CreateFrame("Frame", "DragonflightAddonFrame", UIParent)
 DragonflightAddon:RegisterEvent("PLAYER_LOGIN")
+DragonflightAddon:RegisterEvent("PLAYER_EQUIPMENT_CHANGED")
+DragonflightAddon:RegisterEvent("PLAYER_MONEY")
+DragonflightAddon:RegisterEvent("CURRENCY_DISPLAY_UPDATE")
 DragonflightAddon:SetScript("OnEvent", function(self, event, ...)
     if self[event] then
         return self[event](self, ...)
@@ -17,7 +20,7 @@ local L = {
     ["GEAR_COST_INFO_MIN"] = "Min Cost=",
     ["GEAR_COST_INFO_LEVELS"] = "Levels= ",
     ["GEAR_COST_INFO_PLAYER_BRONZE"] = "Player Bronze=",
-	["MINUSA"] = "Max "
+    ["MINUSA"] = "Max "
 }
 
 -- Localization table for Russian
@@ -31,7 +34,7 @@ local L_ru = {
     ["GEAR_COST_INFO_MIN"] = "Минимальная стоимость=",
     ["GEAR_COST_INFO_LEVELS"] = "Надеты ",
     ["GEAR_COST_INFO_PLAYER_BRONZE"] = "Всего Бронзы=",
-	["MINUSA"] = "Max "
+    ["MINUSA"] = "Max "
 }
 
 -- Choose the active localization table based on the game client language
@@ -93,8 +96,19 @@ function DragonflightAddon:CalculateGearCosts()
 end
 
 function DragonflightAddon:PLAYER_LOGIN()
-    local totalCost, costMin, lvlMin, lvlMax, playerBronze = self:CalculateGearCosts()
-    print(activeLocalization["GEAR_COST_INFO_TOTAL"], totalCost, activeLocalization["GEAR_COST_INFO_MIN"], costMin, activeLocalization["GEAR_COST_INFO_LEVELS"], lvlMin, activeLocalization["MINUSA"], lvlMax, activeLocalization["GEAR_COST_INFO_PLAYER_BRONZE"], playerBronze)
+    -- Do nothing on login for now
+end
+
+function DragonflightAddon:PLAYER_EQUIPMENT_CHANGED()
+    -- Do nothing on equipment change for now
+end
+
+function DragonflightAddon:PLAYER_MONEY()
+    -- Do nothing on money change for now
+end
+
+function DragonflightAddon:CURRENCY_DISPLAY_UPDATE()
+    -- Do nothing on currency update for now
 end
 
 local lvls = {
@@ -138,21 +152,30 @@ local function addCommas(input)
     end
 end
 
-local function GetBronzeToNextTierInfo(uphave, totalCost)
+local function GetBronzeToNextTierInfo(totalCost)
     local playerBronze = C_CurrencyInfo.GetCurrencyInfo(2778).quantity
     local bronzeNeeded = totalCost - playerBronze
     if bronzeNeeded > 0 then
-        return L["BRONZE_TO_NEXT_TIER"] .. addCommas(bronzeNeeded)
+        return activeLocalization["BRONZE_TO_NEXT_TIER"] .. addCommas(bronzeNeeded)
     else
-        return L["NO_BRONZE_NEEDED"]
+        return activeLocalization["NO_BRONZE_NEEDED"]
     end
 end
 
-local totalCost, _, lvlMin, _, _ = DragonflightAddon:CalculateGearCosts()
-if lvlMin >= 346 then
-    print(L["CURRENT_TIER"], lvlMin)
-    print(L["NEXT_TIER"], lvls[lvlMin])
-    print(GetBronzeToNextTierInfo(0, totalCost))
-else
-    print(L["BELOW_346"])
+local function DisplayGearInfo()
+    local totalCost, costMin, lvlMin, lvlMax, playerBronze = DragonflightAddon:CalculateGearCosts()
+    if lvlMin >= 346 then
+        print(activeLocalization["CURRENT_TIER"], lvlMin)
+        print(activeLocalization["NEXT_TIER"], lvls[lvlMin])
+        print(GetBronzeToNextTierInfo(totalCost))
+    else
+        print(activeLocalization["BELOW_346"])
+    end
+    print(activeLocalization["GEAR_COST_INFO_TOTAL"], totalCost, activeLocalization["GEAR_COST_INFO_MIN"], costMin, activeLocalization["GEAR_COST_INFO_LEVELS"], lvlMin, activeLocalization["MINUSA"], lvlMax, activeLocalization["GEAR_COST_INFO_PLAYER_BRONZE"], playerBronze)
+end
+
+-- Register the slash command
+SLASH_DRAGONFLIGHTADDON1 = "/dumm"
+SlashCmdList["DRAGONFLIGHTADDON"] = function()
+    DisplayGearInfo()
 end
