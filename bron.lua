@@ -16,11 +16,11 @@ local L = {
     ["BELOW_346"] = "Current Tier is below 346",
     ["BRONZE_TO_NEXT_TIER"] = "Bronze to next tier: ",
     ["NO_BRONZE_NEEDED"] = "No bronze needed for next tier",
-    ["GEAR_COST_INFO_TOTAL"] = "Gear Cost Info: Total Cost=",
-    ["GEAR_COST_INFO_MIN"] = "Min Cost=",
-    ["GEAR_COST_INFO_LEVELS"] = "Levels= ",
-    ["GEAR_COST_INFO_PLAYER_BRONZE"] = "Player Bronze=",
-    ["MINUSA"] = "Max "
+    ["GEAR_COST_INFO_TOTAL"] = "Gear Cost Info: Total Cost = ",
+    ["GEAR_COST_INFO_MIN"] = "Min Cost = ",
+    ["GEAR_COST_INFO_LEVELS"] = "You can improve your equipment ",
+    ["GEAR_COST_INFO_PLAYER_BRONZE"] = "Player Bronze = ",
+    ["MINUSA"] = "before itemlevel "
 }
 
 -- Localization table for Russian
@@ -30,11 +30,11 @@ local L_ru = {
     ["BELOW_346"] = "Текущий уровень ниже 346",
     ["BRONZE_TO_NEXT_TIER"] = "Бронзы к следующему уровню: ",
     ["NO_BRONZE_NEEDED"] = "Бронзы не требуется для следующего уровня",
-    ["GEAR_COST_INFO_TOTAL"] = "Информация о стоимости экипировки: Общая стоимость=",
-    ["GEAR_COST_INFO_MIN"] = "Минимальная стоимость=",
-    ["GEAR_COST_INFO_LEVELS"] = "Надеты ",
-    ["GEAR_COST_INFO_PLAYER_BRONZE"] = "Всего Бронзы=",
-    ["MINUSA"] = "Max "
+    ["GEAR_COST_INFO_TOTAL"] = "Информация о стоимости экипировки: Общая стоимость = ",
+    ["GEAR_COST_INFO_MIN"] = "Минимальная стоимость = ",
+    ["GEAR_COST_INFO_LEVELS"] = "Можно улучшить ",
+    ["GEAR_COST_INFO_PLAYER_BRONZE"] = "Всего Бронзы = ",
+    ["MINUSA"] = "до уровня "
 }
 
 -- Choose the active localization table based on the game client language
