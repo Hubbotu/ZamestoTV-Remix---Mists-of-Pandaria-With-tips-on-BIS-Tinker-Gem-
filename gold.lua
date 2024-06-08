@@ -1238,7 +1238,7 @@ ns.points = {
             cont = true,
             Zamro = true,
             note = L["Flameheart Shawl Note"],
-            pathto = "Interface\\Addons\\"..myname.."\\Icons\\chest.tga",	
+            pathto = "Interface\\Addons\\"..myname.."\\Icons\\mchest.tga",	
 	    }),
 	    [68406040] = ({
             label = L["Riverspeaker's Trident"],
@@ -1246,7 +1246,7 @@ ns.points = {
             achievement = {id = 19982, criteria = 65820}, 					
             Zamro = true,
             note = L["Riverspeaker's Trident Note"],
-            pathto = "Interface\\Addons\\"..myname.."\\Icons\\chest.tga",
+            pathto = "Interface\\Addons\\"..myname.."\\Icons\\mchest.tga",
 	    }),
 	    [68406040] = ({
             label = L["Cloudstrike Family Helm"],
@@ -1254,7 +1254,7 @@ ns.points = {
             achievement = {id = 19982, criteria = 65821}, 				
             Zamro = true,
             note = L["Cloudstrike Family Helm Note"],
-            pathto = "Interface\\Addons\\"..myname.."\\Icons\\chest.tga",
+            pathto = "Interface\\Addons\\"..myname.."\\Icons\\mchest.tga",
 	    }),
 	    [68406040] = ({
             label = L["Snowdrift Tiger Talons"],
@@ -1262,7 +1262,7 @@ ns.points = {
             achievement = {id = 19982, criteria = 65822}, 				
             Zamro = true,
             note = L["Snowdrift Tiger Talons Note"],
-            pathto = "Interface\\Addons\\"..myname.."\\Icons\\chest.tga",
+            pathto = "Interface\\Addons\\"..myname.."\\Icons\\mchest.tga",
 	    }),
 	    [49706940] = ({
             label = L["Gleaming Treasure Chest"],
@@ -1270,7 +1270,7 @@ ns.points = {
 			quest = 32969,					
             Zamro = true,
             note = L["Gleaming Treasure Chest Note"],
-            pathto = "Interface\\Addons\\"..myname.."\\Icons\\chest.tga",
+            pathto = "Interface\\Addons\\"..myname.."\\Icons\\mchest.tga",
 	    }),
 	    [54004720] = ({
             label = L["Rope-Bound Treasure Chest"],
@@ -1278,7 +1278,7 @@ ns.points = {
 			quest = 32968,					
             Zamro = true,
             note = L["Rope-Bound Treasure Chest Note"],
-            pathto = "Interface\\Addons\\"..myname.."\\Icons\\chest.tga",
+            pathto = "Interface\\Addons\\"..myname.."\\Icons\\mchest.tga",
 	    }),
 	    [58706010] = ({
             label = L["Mist-Covered Treasure Chest"],
@@ -1286,7 +1286,7 @@ ns.points = {
 			quest = 32971,					
             Zamro = true,
             note = L["Mist-Covered Treasure Chest Note"],
-            pathto = "Interface\\Addons\\"..myname.."\\Icons\\chest.tga",
+            pathto = "Interface\\Addons\\"..myname.."\\Icons\\mchest.tga",
 	    }),
 	    [40009200] = ({
             label = L["Sunken Treasure"],
@@ -1294,7 +1294,7 @@ ns.points = {
 			quest = 32957,					
             Zamro = true,
             note = L["Sunken Treasure Note"],
-            pathto = "Interface\\Addons\\"..myname.."\\Icons\\chest.tga",
+            pathto = "Interface\\Addons\\"..myname.."\\Icons\\mchest.tga",
 	    }),
 	    [17205730] = ({
             label = L["Blackguard's Jetsam"],
@@ -1302,7 +1302,7 @@ ns.points = {
 			quest = 32956,					
             Zamro = true,
             note = L["Blackguard's Jetsam Note"],
-            pathto = "Interface\\Addons\\"..myname.."\\Icons\\chest.tga",
+            pathto = "Interface\\Addons\\"..myname.."\\Icons\\mchest.tga",
 	    }),
 	    [71308000] = ({
             label = L["Gleaming Treasure Satchel"],
@@ -1310,7 +1310,7 @@ ns.points = {
 			quest = 32970,					
             Zamro = true,
             note = L["Gleaming Treasure Satchel Note"],
-            pathto = "Interface\\Addons\\"..myname.."\\Icons\\chest.tga",	
+            pathto = "Interface\\Addons\\"..myname.."\\Icons\\mchest.tga",	
 	    }),
 		[44003720] = ({
             label = L["Jadefire"],
