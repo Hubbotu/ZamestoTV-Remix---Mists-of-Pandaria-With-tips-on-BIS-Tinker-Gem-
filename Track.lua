@@ -45,7 +45,19 @@ local L = {
         BRONZE_PER_HOUR = "Bronze per hour: ",
         BRONZE_THIS_SESSION = "Bronze this session: ",
         BRONZE_TRACKER = "Bronze Tracker"
-    }
+    },
+	zhTW = {
+        TOTAL_BRONZE = "Total bronze: ",
+        BRONZE_PER_HOUR = "Bronze per hour: ",
+        BRONZE_THIS_SESSION = "Bronze this session: ",
+        BRONZE_TRACKER = "Bronze Tracker"
+    },
+	koKR = {
+        TOTAL_BRONZE = "Total bronze: ",
+        BRONZE_PER_HOUR = "Bronze per hour: ",
+        BRONZE_THIS_SESSION = "Bronze this session: ",
+        BRONZE_TRACKER = "Bronze Tracker"
+	}	
 }
 
 -- Set the default language to English

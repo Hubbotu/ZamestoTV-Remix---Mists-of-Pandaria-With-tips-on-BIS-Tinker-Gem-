@@ -115,10 +115,9 @@ local function ValidateTransmog(itemLink, slot, callback)
                 local unknownCount = 0
                 
                 for _, child in ipairs(children) do
-                    local elementData = child:GetElementData()
-                    local childItemID = elementData and elementData.itemID
-                    if childItemID then
-                        if C_TransmogCollection.PlayerHasTransmog(childItemID) then
+                    local elementData = child.itemID
+                    if elementData then
+                        if C_TransmogCollection.PlayerHasTransmog(elementData) then
                             knownCount = knownCount + 1
                         else
                             unknownCount = unknownCount + 1
